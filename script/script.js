@@ -1,2 +1,3 @@
-const para = document.querySelector("p");
-para.textContent = "hello world";
+import { arrFood } from "./model/data.js";
+
+console.log(arrFood);
