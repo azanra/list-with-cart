@@ -16,6 +16,36 @@ function buttonAddToCart(element) {
   );
 }
 
+function buttonActionCart(element) {
+  createElement(`#btn-${element.id}`, "span", {
+    id: `action-${element.id}`,
+  });
+  createElement(
+    `#action-${element.id}`,
+    "button",
+    {
+      type: "button",
+      id: `incre-${element.id}`,
+      class: "incre-btn",
+    },
+    "+"
+  );
+  createElement(`#action-${element.id}`, "span", {
+    id: `amount-${element.id}`,
+    class: "amount-text",
+  });
+  createElement(
+    `#action-${element.id}`,
+    "button",
+    {
+      type: "button",
+      id: `decre-${element.id}`,
+      class: "decre-btn",
+    },
+    "-"
+  );
+}
+
 export default function addToCartBtn(element) {
   createElement(`#container-${element.id}`, "button", {
     type: "button",
@@ -23,4 +53,5 @@ export default function addToCartBtn(element) {
     id: `btn-${element.id}`,
   });
   buttonAddToCart(element);
+  buttonActionCart(element);
 }
