@@ -1,5 +1,8 @@
 import createElement from "./createElement.js";
 import addToCartBtn from "./addToCartBtn.js";
+import foodCategory from "./foodCategory.js";
+import foodName from "./foodName.js";
+import foodPrice from "./foodPrice.js";
 
 export default function foodCard(foodArray) {
   foodArray.forEach((element) => {
@@ -10,5 +13,8 @@ export default function foodCard(foodArray) {
       class: `foodImage`,
     });
     addToCartBtn(element);
+    foodCategory(element);
+    foodName(element);
+    foodPrice(element);
   });
 }
