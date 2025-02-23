@@ -24,10 +24,27 @@
 body {
   font-family: "Red Hat Text", "Red Hat Display", var(--system-ui);
   display: flex;
+  box-sizing: border-box;
 }
 
 .content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.foodImage {
+  width: 300px;
+  border-radius: 5px;
+}
+
+.content div {
+  display: flex;
+  flex-direction: column;
+}
+
+.toCartBtn {
+  width: 60%;
+  margin-left: 20%;
 }
