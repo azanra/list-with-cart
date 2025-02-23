@@ -21,10 +21,20 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+h1,
+p {
+  margin: 0;
+}
+
 body {
   font-family: "Red Hat Text", "Red Hat Display", var(--system-ui);
   display: flex;
   box-sizing: border-box;
+}
+
+.main,
+.sidebar {
+  margin-left: 5%;
 }
 
 .content {
