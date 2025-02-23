@@ -18,9 +18,11 @@
       <div class="sidebar-header">
         <h1>Your Cart (<span class="cart-amount"></span>)</h1>
       </div>
-      <div class="sidebar-cart"></div>
-      <div class="sidebar-total">
-        <p>Order Total <span class="order-amount"></span></p>
+      <div class="sidebar-order">
+        <div class="sidebar-cart"></div>
+        <div class="sidebar-total">
+          <p>Order Total <span class="order-amount"></span></p>
+        </div>
       </div>
       <div class="sidebar-carbon-container">
         <img src="./assets/images/icon-carbon-neutral.svg" alt="" />
@@ -29,6 +31,24 @@
       <div class="sidebar-btn-container">
         <button type="button">Confirm Order</button>
       </div>
+    </div>
+    <div class="modal-order-container">
+      <dialog>
+        <div class="modal-order-image">
+          <img src="./assets/images/icon-order-confirmed.svg" alt="" />
+        </div>
+        <h1>Order Confirmed</h1>
+        <p>We hope you enjoy your food</p>
+        <div class="modal-order">
+          <div class="modal-cart"></div>
+          <div class="modal-total">
+            <p>Order Total <span class="order-amount"></span></p>
+          </div>
+        </div>
+        <div class="modal-btn-container">
+          <button type="button">Start New Order</button>
+        </div>
+      </dialog>
     </div>
   </body>
 </html>
