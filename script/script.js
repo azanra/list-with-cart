@@ -1,3 +1,4 @@
+import addToCartController from "./controller/addCartController.js";
 import { arrFood } from "./model/data.js";
 import foodFactory from "./model/foodFactory.js";
 import foodCard from "./view/foodCard.js";
@@ -17,3 +18,4 @@ console.log(arrFood);
 console.log(listFoodObj);
 
 foodCard(listFoodObj);
+addToCartController();

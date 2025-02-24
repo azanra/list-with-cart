@@ -2,7 +2,7 @@ import createElement from "./createElement.js";
 
 function buttonAddToCart(element) {
   createElement(`#btn-${element.id}`, "span", {
-    class: `btn-container-${element.id}`,
+    class: `btn-container-${element.id} btn-cart-logo`,
   });
   createElement(`.btn-container-${element.id}`, "img", {
     src: "../assets/images/icon-add-to-cart.svg",
@@ -16,30 +16,30 @@ function buttonAddToCart(element) {
   );
 }
 
-function buttonActionCart(element) {
-  createElement(`#btn-${element.id}`, "span", {
-    id: `action-${element.id}`,
+export function buttonActionCart(element) {
+  createElement(`#btn-${element}`, "span", {
+    id: `action-${element}`,
   });
   createElement(
-    `#action-${element.id}`,
+    `#action-${element}`,
     "button",
     {
       type: "button",
-      id: `incre-${element.id}`,
+      id: `incre-${element}`,
       class: "incre-btn",
     },
     "+"
   );
-  createElement(`#action-${element.id}`, "span", {
-    id: `amount-${element.id}`,
+  createElement(`#action-${element}`, "span", {
+    id: `amount-${element}`,
     class: "amount-text",
   });
   createElement(
-    `#action-${element.id}`,
+    `#action-${element}`,
     "button",
     {
       type: "button",
-      id: `decre-${element.id}`,
+      id: `decre-${element}`,
       class: "decre-btn",
     },
     "-"
@@ -53,5 +53,4 @@ export default function addToCartBtn(element) {
     id: `btn-${element.id}`,
   });
   buttonAddToCart(element);
-  buttonActionCart(element);
 }
