@@ -10,3 +10,8 @@ export function deleteElement(element) {
     refElement.remove();
   }
 }
+
+export function getTheId(parentElement, index) {
+  let splitParentId = parentElement.split("-");
+  return splitParentId[index];
+}
