@@ -12,3 +12,10 @@ export default function addToCartController() {
     });
   });
 }
+
+function addActionListener(parentId) {
+  const increBtn = document.querySelectorAll(`incre-${parentId}`);
+  increBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {});
+  });
+}

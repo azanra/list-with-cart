@@ -10,7 +10,6 @@ export const arrFood = [
     name: "Waffle with Berries",
     category: "Waffle",
     price: 6.5,
-    amount: 0,
   },
   {
     id: 2,
@@ -23,7 +22,6 @@ export const arrFood = [
     name: "Vanilla Bean Crème Brûlée",
     category: "Crème Brûlée",
     price: 7.0,
-    amount: 0,
   },
   {
     id: 3,
@@ -36,7 +34,6 @@ export const arrFood = [
     name: "Macaron Mix of Five",
     category: "Macaron",
     price: 8.0,
-    amount: 0,
   },
   {
     id: 4,
@@ -49,7 +46,6 @@ export const arrFood = [
     name: "Classic Tiramisu",
     category: "Tiramisu",
     price: 5.5,
-    amount: 0,
   },
   {
     id: 5,
@@ -62,7 +58,6 @@ export const arrFood = [
     name: "Pistachio Baklava",
     category: "Baklava",
     price: 4.0,
-    amount: 0,
   },
   {
     id: 6,
@@ -75,7 +70,6 @@ export const arrFood = [
     name: "Lemon Meringue Pie",
     category: "Pie",
     price: 5.0,
-    amount: 0,
   },
   {
     id: 7,
@@ -88,7 +82,6 @@ export const arrFood = [
     name: "Red Velvet Cake",
     category: "Cake",
     price: 4.5,
-    amount: 0,
   },
   {
     id: 8,
@@ -101,7 +94,6 @@ export const arrFood = [
     name: "Salted Caramel Brownie",
     category: "Brownie",
     price: 4.5,
-    amount: 0,
   },
   {
     id: 9,
@@ -114,6 +106,5 @@ export const arrFood = [
     name: "Vanilla Panna Cotta",
     category: "Panna Cotta",
     price: 6.5,
-    amount: 0,
   },
 ];
