@@ -1,14 +1,11 @@
 import addToCartController from "./controller/addCartController.js";
-import { arrFood } from "./model/data.js";
-import foodFactory from "./model/foodFactory.js";
+import foodList from "./model/foodList.js";
 import foodCard from "./view/foodCard.js";
 
-let listFoodObj = arrFood.map((item) => {
-  return foodFactory(item.id, item.image, item.name, item.category, item.price);
-});
+const listFood = foodList();
 
-console.log(arrFood);
-console.log(listFoodObj);
+listFood.addFood();
+console.log(listFood.getListFood());
 
-foodCard(listFoodObj);
-addToCartController();
+foodCard(listFood.getListFood());
+// addToCartController();
