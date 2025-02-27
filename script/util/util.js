@@ -1,17 +1,18 @@
-export function setMultipleAttribute(element, objAttr) {
-  for (let key in objAttr) {
-    element.setAttribute(key, objAttr[key]);
-  }
-}
-
-export function deleteElement(element) {
-  const refElement = document.querySelector(element);
-  if (refElement !== null) {
-    refElement.remove();
-  }
-}
-
-export function getTheId(parentElement, index) {
-  let splitParentId = parentElement.split("-");
-  return splitParentId[index];
-}
+export const util = {
+  setMultipleAttribute: function (element, elementAttribute) {
+    for (let attribute in elementAttribute) {
+      element.setAttribute(attribute, elementAttribute[attribute]);
+    }
+  },
+  deleteElement: function (element) {
+    const referenceElement = document.querySelector(element);
+    if (referenceElement !== null) {
+      referenceElement.remove();
+    }
+  },
+  getParentId: function (currentElement) {
+    let parentElementId = currentElement.parentNode.id;
+    let splitParentId = parentElementId.split("-");
+    return splitParentId[1];
+  },
+};
