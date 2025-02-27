@@ -18,5 +18,19 @@ export default function foodList() {
   const getListFood = function () {
     return listFoodArr;
   };
-  return { addFood, getListFood };
+  const findFoodToEdit = function (foodId) {
+    listFoodArr.forEach((item) => {
+      if (item.id === foodId) {
+        item.setEdit();
+      }
+    });
+  };
+  const findEdittedFood = function () {
+    listFoodArr.forEach((item) => {
+      if (item.edit === true) {
+        return item.id;
+      }
+    });
+  };
+  return { addFood, getListFood, findFoodToEdit, findEdittedFood };
 }
