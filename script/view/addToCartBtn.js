@@ -17,7 +17,7 @@ function buttonAddToCart(element) {
 }
 
 export function buttonActionCart(element) {
-  createElement(`#btn-${element}`, "span", {
+  createElement(`#actionContainer-${element}`, "span", {
     id: `action-${element}`,
   });
   createElement(
@@ -47,7 +47,10 @@ export function buttonActionCart(element) {
 }
 
 export default function addToCartBtn(element) {
-  createElement(`#container-${element.id}`, "button", {
+  createElement(`#container-${element.id}`, "div", {
+    id: `actionContainer-${element.id}`,
+  });
+  createElement(`#actionContainer-${element.id}`, "button", {
     type: "button",
     class: "toCartBtn",
     id: `btn-${element.id}`,
