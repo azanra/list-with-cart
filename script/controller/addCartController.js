@@ -19,7 +19,7 @@ export const controller = {
     buttonActionCart(foodId);
   },
   addCartController: function (listFood) {
-    this.putListener(".toCartBtn", this.addToCartEvent, listFood);
+    this.putListener(".toCartBtn", this.addToCartEvent.bind(this), listFood);
   },
   incrementEvent: function (listFood) {
     const increBtn = document.querySelectorAll(
