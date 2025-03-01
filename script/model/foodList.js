@@ -18,19 +18,17 @@ export default function foodList() {
   const getListFood = function () {
     return listFoodArr;
   };
-  const findFoodToEdit = function (foodId) {
+  const incrementFoodAmount = function (foodId) {
     listFoodArr.forEach((item) => {
-      if (item.id === foodId) {
-        item.setEdit();
+      if (item.id === Number(foodId)) {
+        item.incrementAmount();
+        console.log(`item amount with id of ${item.id} is ${item.getAmount()}`);
       }
     });
   };
-  const findEdittedFood = function () {
-    listFoodArr.forEach((item) => {
-      if (item.edit === true) {
-        return item.id;
-      }
-    });
+  return {
+    addFood,
+    getListFood,
+    incrementFoodAmount,
   };
-  return { addFood, getListFood, findFoodToEdit, findEdittedFood };
 }
