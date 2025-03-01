@@ -28,7 +28,7 @@ export function buttonActionCart(element) {
     },
     "-"
   );
-  // document.querySelector(`#decre-${element}`).style.opacity = 0;
+  document.querySelector(`#decre-${element}`).style.opacity = 0;
   createElement(`#action-${element}`, "span", {
     id: `amount-${element}`,
     class: "amount-text",
@@ -44,14 +44,15 @@ export function buttonActionCart(element) {
     },
     "+"
   );
-  // document.querySelector(`#incre-${element}`).style.opacity = 0;
+  document.querySelector(`#incre-${element}`).style.opacity = 0;
 }
 
 export default function addToCartBtn(element) {
   createElement(`#container-${element.id}`, "div", {
-    id: `addContainer-${element.id}`,
+    id: `add-${element.id}`,
+    class: "addContainer",
   });
-  createElement(`#addContainer-${element.id}`, "button", {
+  createElement(`#add-${element.id}`, "button", {
     type: "button",
     class: "toCartBtn",
     id: `btn-${element.id}`,
