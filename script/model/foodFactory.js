@@ -1,6 +1,5 @@
 export default function foodFactory(id, image, name, category, price) {
   let amount = 0;
-  let edit = false;
   const countTotalPrice = function () {
     return this.price * this.amount;
   };
@@ -16,9 +15,6 @@ export default function foodFactory(id, image, name, category, price) {
   const getAmount = function () {
     return amount;
   };
-  const setEdit = function () {
-    !edit;
-  };
   return {
     id,
     image,
@@ -30,6 +26,5 @@ export default function foodFactory(id, image, name, category, price) {
     decrementAmount,
     resetAmount,
     getAmount,
-    setEdit,
   };
 }
