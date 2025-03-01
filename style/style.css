@@ -49,9 +49,16 @@ body {
   border-radius: 5px;
 }
 
-.content div {
+.actionContainer {
   display: flex;
-  flex-direction: column;
+  margin-left: 70px;
+  position: relative;
+  bottom: 40px;
+}
+
+.decre-btn,
+.amount-text {
+  margin-right: 60px;
 }
 
 .toCartBtn {

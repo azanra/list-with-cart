@@ -17,19 +17,18 @@ function buttonAddToCart(element) {
 }
 
 export function buttonActionCart(element) {
-  createElement(`#actionContainer-${element}`, "span", {
-    id: `action-${element}`,
-  });
   createElement(
     `#action-${element}`,
     "button",
     {
       type: "button",
-      id: `incre-${element}`,
-      class: "incre-btn",
+      id: `decre-${element}`,
+      class: "decre-btn",
+      disabled: "",
     },
-    "+"
+    "-"
   );
+  // document.querySelector(`#decre-${element}`).style.opacity = 0;
   createElement(`#action-${element}`, "span", {
     id: `amount-${element}`,
     class: "amount-text",
@@ -39,21 +38,28 @@ export function buttonActionCart(element) {
     "button",
     {
       type: "button",
-      id: `decre-${element}`,
-      class: "decre-btn",
+      id: `incre-${element}`,
+      class: "incre-btn",
+      disabled: "",
     },
-    "-"
+    "+"
   );
+  // document.querySelector(`#incre-${element}`).style.opacity = 0;
 }
 
 export default function addToCartBtn(element) {
   createElement(`#container-${element.id}`, "div", {
-    id: `actionContainer-${element.id}`,
+    id: `addContainer-${element.id}`,
   });
-  createElement(`#actionContainer-${element.id}`, "button", {
+  createElement(`#addContainer-${element.id}`, "button", {
     type: "button",
     class: "toCartBtn",
     id: `btn-${element.id}`,
   });
+  createElement(`#container-${element.id}`, "div", {
+    id: `action-${element.id}`,
+    class: "actionContainer",
+  });
   buttonAddToCart(element);
+  buttonActionCart(element.id);
 }
