@@ -1,5 +1,9 @@
 import { util } from "../util/util.js";
-import { buttonActionCart } from "../view/addToCartBtn.js";
+import {
+  buttonActionCart,
+  enableAction,
+  unhideAction,
+} from "../view/addToCartBtn.js";
 
 export const controller = {
   putListener: function (element, event, listFood) {
@@ -10,28 +14,20 @@ export const controller = {
       });
     });
   },
-  addToCartEvent: function (element, listFood) {
+  addToCartEvent: function (element) {
     let foodId = util.getParentId(element);
-    listFood.findFoodToEdit(foodId);
-
-    util.deleteElement(`.btn-container-${foodId}`);
-    util.deleteElement(`#btn-${foodId}`);
-    buttonActionCart(foodId);
+    util.deleteElement(`#add-${foodId}`);
+    unhideAction(foodId);
+    enableAction(foodId);
   },
-  addCartController: function (listFood) {
-    this.putListener(".toCartBtn", this.addToCartEvent.bind(this), listFood);
+  addCartController: function () {
+    this.putListener(".toCartBtn", this.addToCartEvent.bind(this));
   },
-  incrementEvent: function (listFood) {
-    const increBtn = document.querySelectorAll(
-      `incre-${listFood.findEdittedFood()}`
-    );
-    if (increBtn !== null || increBtn !== undefined) {
-      increBtn.forEach((btn) => {
-        let foodId = util.getParentId(increBtn);
-        btn.addEventListener("click", () => {
-          listFood.incrementFoodAmount(foodId);
-        });
-      });
-    }
+  incrementEvent: function (element, listFood) {
+    let foodId = util.getParentId(element);
+    listFood.incrementFoodAmount(foodId);
+  },
+  incrementController: function (listFood) {
+    this.putListener(".incre-btn", this.incrementEvent.bind(this), listFood);
   },
 };

@@ -1,4 +1,4 @@
-import addToCartController from "./controller/addCartController.js";
+import { controller } from "./controller/addCartController.js";
 import foodList from "./model/foodList.js";
 import foodCard from "./view/foodCard.js";
 
@@ -8,4 +8,5 @@ listFood.addFood();
 console.log(listFood.getListFood());
 
 foodCard(listFood.getListFood());
-// addToCartController();
+controller.addCartController(listFood);
+controller.incrementController(listFood);

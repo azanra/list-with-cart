@@ -56,9 +56,6 @@ body {
   bottom: 15px;
 }
 
-.toCartBtn {
-}
-
 .toCartBtn:hover {
   background-color: orange;
 }
