@@ -6,7 +6,7 @@ import {
 } from "../view/addToCartBtn.js";
 
 export const controller = {
-  putListener: function (element, event, listFood) {
+  putListener: (element, event, listFood) => {
     const nodeElement = document.querySelectorAll(element);
     nodeElement.forEach((item) => {
       item.addEventListener("click", () => {
@@ -14,7 +14,7 @@ export const controller = {
       });
     });
   },
-  addToCartEvent: function (element) {
+  addToCartEvent: (element) => {
     let foodId = util.getParentId(element);
     util.deleteElement(`#add-${foodId}`);
     unhideAction(foodId);
@@ -23,11 +23,11 @@ export const controller = {
   addCartController: function () {
     this.putListener(".toCartBtn", this.addToCartEvent.bind(this));
   },
-  incrementEvent: function (element, listFood) {
+  incrementEvent: (element, listFood) => {
     let foodId = util.getParentId(element);
     listFood.incrementFoodAmount(foodId);
   },
-  incrementController: function (listFood) {
+  actionController: function (listFood) {
     this.putListener(".incre-btn", this.incrementEvent.bind(this), listFood);
   },
 };
