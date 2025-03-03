@@ -8,5 +8,5 @@ listFood.addFood();
 console.log(listFood.getListFood());
 
 foodCard(listFood.getListFood());
-controller.addCartController(listFood);
-controller.incrementController(listFood);
+controller.addCartController();
+controller.actionController(listFood);

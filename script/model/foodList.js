@@ -3,7 +3,7 @@ import foodFactory from "./foodFactory.js";
 
 export default function foodList() {
   let listFoodArr = [];
-  const addFood = function () {
+  const addFood = () => {
     arrFood.forEach((item) => {
       let foodItem = foodFactory(
         item.id,
@@ -15,10 +15,10 @@ export default function foodList() {
       listFoodArr.push(foodItem);
     });
   };
-  const getListFood = function () {
+  const getListFood = () => {
     return listFoodArr;
   };
-  const incrementFoodAmount = function (foodId) {
+  const incrementFoodAmount = (foodId) => {
     listFoodArr.forEach((item) => {
       if (item.id === Number(foodId)) {
         item.incrementAmount();
@@ -26,9 +26,20 @@ export default function foodList() {
       }
     });
   };
+  const decrementFoodAmount = (foodId) => {
+    listFoodArr.forEach((item) => {
+      if (item.id === Number(foodId)) {
+        item.decrementAmount();
+        console.log(
+          `current item amount with id of ${item.id} is ${item.getAmount()}`
+        );
+      }
+    });
+  };
   return {
     addFood,
     getListFood,
     incrementFoodAmount,
+    decrementFoodAmount,
   };
 }

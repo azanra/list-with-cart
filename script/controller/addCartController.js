@@ -27,7 +27,12 @@ export const controller = {
     let foodId = util.getParentId(element);
     listFood.incrementFoodAmount(foodId);
   },
+  decrementEvent: (element, listFood) => {
+    let foodId = util.getParentId(element);
+    listFood.decrementFoodAmount(foodId);
+  },
   actionController: function (listFood) {
     this.putListener(".incre-btn", this.incrementEvent.bind(this), listFood);
+    this.putListener(".decre-btn", this.decrementEvent.bind(this), listFood);
   },
 };

@@ -7,7 +7,7 @@ export default function foodFactory(id, image, name, category, price) {
     amount++;
   };
   const decrementAmount = function () {
-    amount--;
+    amount > 0 ? amount-- : alert("Item cant be negative");
   };
   const resetAmount = function () {
     amount = 0;
