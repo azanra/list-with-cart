@@ -1,7 +1,7 @@
 export default function foodFactory(id, image, name, category, price) {
   let amount = 0;
   const countTotalPrice = function () {
-    return this.price * this.amount;
+    return this.price * amount;
   };
   const incrementAmount = function () {
     amount++;

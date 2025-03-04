@@ -72,3 +72,9 @@ body {
   bottom: 30px;
   padding: 10px 40px;
 }
+
+.cartAmount,
+.cartPrice,
+.cartTotalPrice {
+  margin-right: 15px;
+}

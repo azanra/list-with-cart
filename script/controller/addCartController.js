@@ -1,9 +1,6 @@
 import { util } from "../util/util.js";
-import {
-  buttonActionCart,
-  enableAction,
-  unhideAction,
-} from "../view/addToCartBtn.js";
+import { enableAction, unhideAction } from "../view/addToCartBtn.js";
+import { cartItem } from "../view/cartItem.js";
 
 export const controller = {
   putListener: (element, event, listFood) => {
@@ -26,13 +23,16 @@ export const controller = {
   incrementEvent: (element, listFood) => {
     let foodId = util.getParentId(element);
     listFood.incrementFoodAmount(foodId);
+    cartItem(listFood);
   },
   decrementEvent: (element, listFood) => {
     let foodId = util.getParentId(element);
     listFood.decrementFoodAmount(foodId);
+    cartItem(listFood);
   },
   actionController: function (listFood) {
     this.putListener(".incre-btn", this.incrementEvent.bind(this), listFood);
     this.putListener(".decre-btn", this.decrementEvent.bind(this), listFood);
   },
+  updateCart: () => {},
 };
