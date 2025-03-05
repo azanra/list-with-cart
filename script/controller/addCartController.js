@@ -1,6 +1,7 @@
 import { util } from "../util/util.js";
 import { enableAction, unhideAction } from "../view/addToCartBtn.js";
 import { cartItem } from "../view/cartItem.js";
+import { removeCartController } from "./removeCartController.js";
 
 export const controller = {
   putListener: (element, event, listFood) => {
@@ -26,6 +27,7 @@ export const controller = {
     this.updateFoodAmount(foodId, listFood);
     cartItem(listFood);
     this.updateTotalPrice(listFood);
+    removeCartController.putListener(listFood);
   },
   decrementEvent: function (element, listFood) {
     let foodId = util.getParentId(element);

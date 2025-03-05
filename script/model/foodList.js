@@ -51,6 +51,14 @@ export default function foodList() {
     }, 0);
     return totalPrice;
   };
+  const resetFoodAmount = (foodId) => {
+    listFoodArr.forEach((item) => {
+      if (item.id === Number(foodId)) {
+        item.resetAmount();
+        console.log(item.getAmount());
+      }
+    });
+  };
   return {
     addFood,
     getListFood,
@@ -58,5 +66,6 @@ export default function foodList() {
     decrementFoodAmount,
     getFoodAmount,
     getTotalPrice,
+    resetFoodAmount,
   };
 }
