@@ -36,10 +36,20 @@ export default function foodList() {
       }
     });
   };
+  const getFoodAmount = (foodId) => {
+    let foodAmount;
+    listFoodArr.forEach((item) => {
+      if (item.id === Number(foodId)) {
+        foodAmount = item.getAmount();
+      }
+    });
+    return foodAmount;
+  };
   return {
     addFood,
     getListFood,
     incrementFoodAmount,
     decrementFoodAmount,
+    getFoodAmount,
   };
 }

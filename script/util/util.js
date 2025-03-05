@@ -21,4 +21,7 @@ export const util = {
   setElementActivity: (element, boolean) => {
     document.querySelector(element).disabled = boolean;
   },
+  setTextContent: (element, textContent) => {
+    document.querySelector(element).textContent = textContent;
+  },
 };
