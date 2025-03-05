@@ -45,11 +45,18 @@ export default function foodList() {
     });
     return foodAmount;
   };
+  const getTotalPrice = () => {
+    let totalPrice = listFoodArr.reduce((accumulator, item) => {
+      return (accumulator += item.countTotalPrice());
+    }, 0);
+    return totalPrice;
+  };
   return {
     addFood,
     getListFood,
     incrementFoodAmount,
     decrementFoodAmount,
     getFoodAmount,
+    getTotalPrice,
   };
 }

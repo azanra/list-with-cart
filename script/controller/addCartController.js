@@ -20,22 +20,30 @@ export const controller = {
   addCartController: function () {
     this.putListener(".toCartBtn", this.addToCartEvent.bind(this));
   },
-  incrementEvent: (element, listFood) => {
+  incrementEvent: function (element, listFood) {
     let foodId = util.getParentId(element);
     listFood.incrementFoodAmount(foodId);
-    let foodAmount = listFood.getFoodAmount(foodId);
-    util.setTextContent(`#amount-${foodId}`, foodAmount);
+    this.updateFoodAmount(foodId, listFood);
     cartItem(listFood);
+    this.updateTotalPrice(listFood);
   },
-  decrementEvent: (element, listFood) => {
+  decrementEvent: function (element, listFood) {
     let foodId = util.getParentId(element);
     listFood.decrementFoodAmount(foodId);
-    let foodAmount = listFood.getFoodAmount(foodId);
-    util.setTextContent(`#amount-${foodId}`, foodAmount);
+    this.updateFoodAmount(foodId, listFood);
     cartItem(listFood);
+    this.updateTotalPrice(listFood);
   },
   actionController: function (listFood) {
     this.putListener(".incre-btn", this.incrementEvent.bind(this), listFood);
     this.putListener(".decre-btn", this.decrementEvent.bind(this), listFood);
+  },
+  updateFoodAmount: (foodId, listFood) => {
+    let foodAmount = listFood.getFoodAmount(foodId);
+    util.setTextContent(`#amount-${foodId}`, foodAmount);
+  },
+  updateTotalPrice: (listFood) => {
+    let totalPrice = listFood.getTotalPrice();
+    util.setTextContent(".order-amount", totalPrice);
   },
 };
