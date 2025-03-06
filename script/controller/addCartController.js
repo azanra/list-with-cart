@@ -25,6 +25,7 @@ export const controller = {
     let foodId = util.getParentId(element);
     listFood.incrementFoodAmount(foodId);
     this.updateFoodAmount(foodId, listFood);
+    cartItem(listFood).removeDuplicate();
     cartItem(listFood).createItem(".sidebarOrder");
     this.updateTotalPrice(listFood);
     removeCartController.putListener(listFood);
@@ -33,6 +34,7 @@ export const controller = {
     let foodId = util.getParentId(element);
     listFood.decrementFoodAmount(foodId);
     this.updateFoodAmount(foodId, listFood);
+    cartItem(listFood).removeDuplicate();
     cartItem(listFood).createItem(".sidebarOrder");
     this.updateTotalPrice(listFood);
   },

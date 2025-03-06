@@ -3,10 +3,12 @@ import createElement from "./createElement.js";
 
 export const cartItem = (foodList) => {
   const listFood = foodList.getListFood();
-  util.deleteElement(".sidebarOrder");
-  createElement(".sidebar-order", "div", {
-    class: "sidebarOrder",
-  });
+  const removeDuplicate = () => {
+    util.deleteElement(".sidebarOrder");
+    createElement(".sidebar-order", "div", {
+      class: "sidebarOrder",
+    });
+  };
   const createItem = (parentElement) => {
     listFood.forEach((item) => {
       let currentAmount = item.getAmount();
@@ -61,5 +63,5 @@ export const cartItem = (foodList) => {
       }
     });
   };
-  return { createItem };
+  return { createItem, removeDuplicate };
 };
