@@ -1,4 +1,5 @@
 import { util } from "../util/util.js";
+import { controller } from "./addCartController.js";
 
 export const removeCartController = (function () {
   const putListener = (listFood) => {
@@ -13,6 +14,8 @@ export const removeCartController = (function () {
     const foodId = util.getParentId(element);
     listFood.resetFoodAmount(foodId);
     util.setTextContent(`#amount-${foodId}`, listFood.getFoodAmount(foodId));
+    util.deleteElement(`#cartContainer-${foodId}`);
+    controller.updateTotalPrice(listFood);
   };
   return { putListener };
 })();
