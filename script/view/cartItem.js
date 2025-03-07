@@ -1,26 +1,28 @@
+import foodList from "../model/foodList.js";
 import { util } from "../util/util.js";
 import createElement from "./createElement.js";
 
-export const cartItem = (foodList) => {
-  const listFood = foodList.getListFood();
+export const cartItem = (function () {
   const removeDuplicate = () => {
     util.deleteElement(".sidebarOrder");
     createElement(".sidebar-order", "div", {
       class: "sidebarOrder",
     });
   };
-  const createItem = (parentElement) => {
+  const createItem = (foodList, parentElement, containerElement) => {
+    const listFood = foodList.getListFood();
     listFood.forEach((item) => {
       let currentAmount = item.getAmount();
       if (currentAmount > 0) {
+        //to help reuse this method, each will have different parent and container
         createElement(parentElement, "div", {
-          id: `cartContainer-${item.id}`,
+          id: `${containerElement}-${item.id}`,
         });
-        createElement(`#cartContainer-${item.id}`, "div", {
-          class: `cartTextContainer-${item.id}`,
+        createElement(`#${containerElement}-${item.id}`, "div", {
+          class: `${containerElement}-${item.id}`,
         });
         createElement(
-          `.cartTextContainer-${item.id}`,
+          `.${containerElement}-${item.id}`,
           "p",
           {
             class: `cartText`,
@@ -28,7 +30,7 @@ export const cartItem = (foodList) => {
           item.name
         );
         createElement(
-          `.cartTextContainer-${item.id}`,
+          `.${containerElement}-${item.id}`,
           "span",
           {
             class: `cartAmount`,
@@ -36,7 +38,7 @@ export const cartItem = (foodList) => {
           currentAmount
         );
         createElement(
-          `.cartTextContainer-${item.id}`,
+          `.${containerElement}-${item.id}`,
           "span",
           {
             class: `cartPrice`,
@@ -44,24 +46,16 @@ export const cartItem = (foodList) => {
           item.price
         );
         createElement(
-          `.cartTextContainer-${item.id}`,
+          `.${containerElement}-${item.id}`,
           "span",
           {
             class: `cartTotalPrice`,
           },
           item.countTotalPrice()
         );
-        createElement(
-          `#cartContainer-${item.id}`,
-          "button",
-          {
-            class: `removeBtn`,
-            id: `remove-${item.id}`,
-          },
-          "X"
-        );
       }
     });
   };
+
   return { createItem, removeDuplicate };
-};
+})();
