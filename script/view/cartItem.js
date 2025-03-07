@@ -18,9 +18,11 @@ export const cartItem = (function () {
         createElement(parentElement, "div", {
           id: `${containerElement}-${item.id}`,
         });
+
         createElement(`#${containerElement}-${item.id}`, "div", {
           class: `${containerElement}-${item.id}`,
         });
+
         createElement(
           `.${containerElement}-${item.id}`,
           "p",
@@ -29,6 +31,7 @@ export const cartItem = (function () {
           },
           item.name
         );
+
         createElement(
           `.${containerElement}-${item.id}`,
           "span",
@@ -37,6 +40,7 @@ export const cartItem = (function () {
           },
           currentAmount
         );
+
         createElement(
           `.${containerElement}-${item.id}`,
           "span",
@@ -45,6 +49,7 @@ export const cartItem = (function () {
           },
           item.price
         );
+
         createElement(
           `.${containerElement}-${item.id}`,
           "span",
@@ -53,8 +58,24 @@ export const cartItem = (function () {
           },
           item.countTotalPrice()
         );
+
+        if (containerElement === "sidebarSection") {
+          createRemoveBtn(containerElement, item.id);
+        }
       }
     });
+  };
+
+  const createRemoveBtn = (containerElement, item) => {
+    createElement(
+      `#${containerElement}-${item}`,
+      "button",
+      {
+        class: `removeBtn`,
+        id: `remove-${item}`,
+      },
+      "X"
+    );
   };
 
   return { createItem, removeDuplicate };
