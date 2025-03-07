@@ -11,4 +11,4 @@ console.log(listFood.getListFood());
 foodCard(listFood.getListFood());
 controller.addCartController();
 controller.actionController(listFood);
-confirmBtnController.confirmListener();
+confirmBtnController.confirmListener(listFood);
