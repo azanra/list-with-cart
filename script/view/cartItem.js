@@ -19,6 +19,10 @@ export const cartItem = (function () {
           id: `${containerElement}-${item.id}`,
         });
 
+        if (containerElement === "modalSection") {
+          createImage(containerElement, item.id, item);
+        }
+
         createElement(`#${containerElement}-${item.id}`, "div", {
           class: `${containerElement}-${item.id}`,
         });
@@ -76,6 +80,13 @@ export const cartItem = (function () {
       },
       "X"
     );
+  };
+
+  const createImage = (containerElement, item, food) => {
+    createElement(`#${containerElement}-${item}`, "img", {
+      class: "ModalImage",
+      src: food.image.thumbnail,
+    });
   };
 
   return { createItem, removeDuplicate };
