@@ -14,7 +14,7 @@ export const removeCartController = (function () {
     const foodId = util.getParentId(element);
     listFood.resetFoodAmount(foodId);
     util.setTextContent(`#amount-${foodId}`, listFood.getFoodAmount(foodId));
-    util.deleteElement(`#cartContainer-${foodId}`);
+    util.deleteElement(`#sidebarSection-${foodId}`);
     controller.updateTotalPrice(listFood);
   };
   return { putListener };
