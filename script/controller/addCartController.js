@@ -3,7 +3,7 @@ import { enableAction, unhideAction } from "../view/addToCartBtn.js";
 import { cartItem } from "../view/cartItem.js";
 import { removeCartController } from "./removeCartController.js";
 
-export const controller = {
+export const foodController = {
   putListener: (element, event, listFood) => {
     const nodeElement = document.querySelectorAll(element);
     nodeElement.forEach((item) => {
