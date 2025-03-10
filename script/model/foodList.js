@@ -59,6 +59,17 @@ export default function foodList() {
       }
     });
   };
+  const resetAllAmount = () => {
+    listFoodArr.forEach((item) => {
+      item.resetAmount();
+      console.log(item.getAmount());
+    });
+  };
+  const display = () => {
+    listFoodArr.forEach((item) =>
+      console.log(`item id: ${item.id} amount: ${item.getAmount()}`)
+    );
+  };
   return {
     addFood,
     getListFood,
@@ -67,5 +78,7 @@ export default function foodList() {
     getFoodAmount,
     getTotalPrice,
     resetFoodAmount,
+    resetAllAmount,
+    display,
   };
 }
