@@ -29,6 +29,7 @@ export const foodController = {
     cartItem.createItem(listFood, ".sidebarOrder", "sidebarSection");
     this.updateTotalPrice(listFood);
     removeCartController.putListener(listFood);
+    util.setTextContent(".cart-amount", listFood.getTotalAmount());
   },
   decrementEvent: function (element, listFood) {
     let foodId = util.getParentId(element);
@@ -37,6 +38,7 @@ export const foodController = {
     cartItem.removeDuplicate();
     cartItem.createItem(listFood, ".sidebarOrder", "sidebarSection");
     this.updateTotalPrice(listFood);
+    util.setTextContent(".cart-amount", listFood.getTotalAmount());
   },
   actionController: function (listFood) {
     this.putListener(".incre-btn", this.incrementEvent.bind(this), listFood);

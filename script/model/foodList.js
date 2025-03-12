@@ -51,6 +51,12 @@ export default function foodList() {
     }, 0);
     return totalPrice;
   };
+  const getTotalAmount = () => {
+    let totalAmount = listFoodArr.reduce((accumulator, item) => {
+      return (accumulator += item.getAmount());
+    }, 0);
+    return totalAmount;
+  };
   const resetFoodAmount = (foodId) => {
     listFoodArr.forEach((item) => {
       if (item.id === Number(foodId)) {
@@ -80,5 +86,6 @@ export default function foodList() {
     resetFoodAmount,
     resetAllAmount,
     display,
+    getTotalAmount,
   };
 }

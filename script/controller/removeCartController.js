@@ -1,5 +1,5 @@
 import { util } from "../util/util.js";
-import { controller } from "./addCartController.js";
+import { foodController } from "./addCartController.js";
 
 export const removeCartController = (function () {
   const putListener = (listFood) => {
@@ -15,7 +15,8 @@ export const removeCartController = (function () {
     listFood.resetFoodAmount(foodId);
     util.setTextContent(`#amount-${foodId}`, listFood.getFoodAmount(foodId));
     util.deleteElement(`#sidebarSection-${foodId}`);
-    controller.updateTotalPrice(listFood);
+    foodController.updateTotalPrice(listFood);
+    util.setTextContent(".cart-amount", listFood.getTotalAmount());
   };
   return { putListener };
 })();
