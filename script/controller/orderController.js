@@ -20,6 +20,7 @@ export const orderController = (function () {
     util.deleteElement(".sidebarOrder");
     util.setTextContent(".order-amount", "");
     util.deleteElement(".cartModalContainer");
+    util.setTextContent(".cart-amount", 0);
   };
   return { orderListener };
 })();
