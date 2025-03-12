@@ -17,6 +17,8 @@ export const foodController = {
     util.deleteElement(`#add-${foodId}`);
     unhideAction(foodId);
     enableAction(foodId);
+    document.querySelector(`#action-${foodId}`).style.backgroundColor =
+      "#c73a0f";
   },
   addCartController: function () {
     this.putListener(".toCartBtn", this.addToCartEvent.bind(this));
