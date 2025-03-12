@@ -19,6 +19,7 @@
 :root {
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --red: #c73a0f;
 }
 
 h1,
@@ -37,7 +38,7 @@ body {
   margin-left: 5%;
 }
 
-.content {
+#contentContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -71,6 +72,13 @@ body {
   position: relative;
   bottom: 30px;
   padding: 10px 40px;
+  border-radius: 50px;
+  border: 1px solid grey;
+}
+
+.btn-cart-logo {
+  display: flex;
+  align-items: center;
 }
 
 .cartAmount,
