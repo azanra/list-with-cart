@@ -7,6 +7,6 @@ export default function foodPrice(element) {
     {
       class: "food-price",
     },
-    element.price
+    `$${element.price}`
   );
 }

@@ -52,6 +52,6 @@ export const foodController = {
   },
   updateTotalPrice: (listFood) => {
     let totalPrice = listFood.getTotalPrice();
-    util.setTextContent(".order-amount", totalPrice);
+    util.setTextContent(".order-amount", `$${totalPrice}`);
   },
 };

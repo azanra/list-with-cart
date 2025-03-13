@@ -42,7 +42,7 @@ export const cartItem = (function () {
           {
             class: `cartAmount`,
           },
-          currentAmount
+          `${currentAmount}x`
         );
 
         createElement(
@@ -51,7 +51,7 @@ export const cartItem = (function () {
           {
             class: `cartPrice`,
           },
-          item.price
+          `@ $${item.price}`
         );
 
         createElement(
@@ -60,7 +60,7 @@ export const cartItem = (function () {
           {
             class: `cartTotalPrice`,
           },
-          item.countTotalPrice()
+          `$${item.countTotalPrice()}`
         );
 
         if (containerElement === "sidebarSection") {

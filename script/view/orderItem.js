@@ -8,7 +8,7 @@ export const orderItem = (function () {
       class: "cartModalContainer",
     });
     cartItem.createItem(listFood, ".cartModalContainer", "modalSection");
-    util.setTextContent(".modal-amount", listFood.getTotalPrice());
+    util.setTextContent(".modal-amount", `$${listFood.getTotalPrice()}`);
   };
   return { extendCartItem };
 })();
