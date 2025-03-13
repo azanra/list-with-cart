@@ -144,3 +144,24 @@ body {
 .sidebar-header {
   color: var(--Red);
 }
+
+.sidebarOrder > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0px;
+  border-bottom: 1px solid var(--Rose-100);
+}
+
+.removeBtn {
+  height: fit-content;
+  border-radius: 50%;
+  padding: 2.5px 5px;
+  border: 1px solid var(--Rose-300);
+  color: var(--Rose-300);
+}
+
+.removeBtn:hover {
+  border: 1px solid black;
+  color: black;
+}
