@@ -120,3 +120,16 @@ body {
 .cartTotalPrice {
   margin-right: 15px;
 }
+
+.sidebar {
+  background-color: var(--Rose-50);
+  height: fit-content;
+  padding: 25px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.header {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
