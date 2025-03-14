@@ -158,10 +158,23 @@ body {
   border-radius: 50%;
   padding: 2.5px 5px;
   border: 1px solid var(--Rose-300);
-  color: var(--Rose-300);
+  color: var(--Rose-00);
 }
 
 .removeBtn:hover {
   border: 1px solid black;
   color: black;
+}
+
+.sidebar-total {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-amount {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--Rose-900);
 }
