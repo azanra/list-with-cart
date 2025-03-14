@@ -215,3 +215,14 @@ body {
 #confirm-order:hover {
   background-color: var(--darkRed);
 }
+
+.modal-order-container {
+  width: 600px;
+  border: none;
+  border-radius: 15px;
+  padding: 3%;
+}
+
+.cartModalContainer > div {
+  display: flex;
+}
