@@ -20,6 +20,7 @@
   --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --Red: hsl(14, 86%, 42%);
+  --darkRed: hsl(14, 86%, 32%);
   --Green: hsl(159, 69%, 38%);
   --Rose-50: hsl(20, 50%, 98%);
   --Rose-100: hsl(13, 31%, 94%);
@@ -188,4 +189,20 @@ body {
   justify-content: center;
   font-size: 15px;
   border-radius: 5px;
+}
+
+#confirm-order {
+  width: 100%;
+  padding: 15px 0px;
+  margin-top: 25px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background-color: var(--Red);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#confirm-order:hover {
+  background-color: var(--darkRed);
 }
