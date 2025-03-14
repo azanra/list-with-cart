@@ -220,9 +220,20 @@ body {
   width: 600px;
   border: none;
   border-radius: 15px;
-  padding: 3%;
+  padding: 35px;
 }
 
 .cartModalContainer > div {
   display: flex;
+}
+
+.modal-header {
+  color: var(--Rose-900);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.modal-body {
+  color: var(--Rose-500);
+  margin-bottom: 30px;
 }
