@@ -134,6 +134,7 @@ body {
   padding: 25px;
   margin-top: 50px;
   border-radius: 5px;
+  width: 400px;
 }
 
 .header {
@@ -177,4 +178,14 @@ body {
   font-size: 25px;
   font-weight: bold;
   color: var(--Rose-900);
+}
+
+.sidebar-carbon-container {
+  background-color: var(--Rose-100);
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  border-radius: 5px;
 }
