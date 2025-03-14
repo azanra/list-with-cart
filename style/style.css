@@ -59,17 +59,26 @@ body {
   border-radius: 5px;
 }
 
-.food-category {
+.food-category,
+.cartPrice {
   color: var(--Rose-500);
 }
 
-.food-name {
+.food-name,
+.cartTotalPrice,
+.cartText {
   color: var(--Rose-900);
   font-weight: bold;
 }
 
-.food-price {
+.cartText {
+  margin-bottom: 10px;
+}
+
+.food-price,
+.cartAmount {
   color: var(--Red);
+  font-weight: bold;
 }
 
 .actionContainer {
