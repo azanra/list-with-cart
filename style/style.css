@@ -294,4 +294,21 @@ body {
 .ModalImage {
   width: 75px;
   height: 75px;
+  border-radius: 5px;
+}
+
+#start-order {
+  width: 100%;
+  padding: 17.5px;
+  border-radius: 25px;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  background-color: var(--Red);
+  color: white;
+  font-weight: bold;
+}
+
+#start-order:hover {
+  background-color: var(--darkRed);
 }
