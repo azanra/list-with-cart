@@ -272,3 +272,8 @@ body {
   padding: 25px;
   border-bottom: 1px solid var(--Rose-100);
 }
+
+.ModalImage {
+  width: 75px;
+  height: 75px;
+}
