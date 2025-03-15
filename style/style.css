@@ -238,8 +238,26 @@ body {
   margin-bottom: 30px;
 }
 
-.modal-cart {
+.modal-cart,
+.modal-total {
   background-color: var(--Rose-50);
+}
+
+.modal-total {
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-amount {
+  color: var(--Rose-900);
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.modal-total > p {
+  color: var(--Rose-900);
 }
 
 .cartModalContainer > div > div {
@@ -264,7 +282,7 @@ body {
 }
 
 .cartModalContainer .cartTotalPrice {
-  margin-left: 125px;
+  margin-left: 150px;
 }
 
 .cartModalContainer > div {
