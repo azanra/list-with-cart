@@ -6,7 +6,7 @@ function buttonAddToCart(element) {
     class: `btn-container-${element.id} btn-cart-logo`,
   });
   createElement(`.btn-container-${element.id}`, "img", {
-    src: "../assets/images/icon-add-to-cart.svg",
+    src: "./assets/images/icon-add-to-cart.svg",
     class: "btnImage",
   });
   createElement(
