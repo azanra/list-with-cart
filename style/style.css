@@ -317,3 +317,7 @@ body {
 .btn-cart-logo > .btnText {
   margin-left: 5px;
 }
+
+#contentContainer > div > p:first-of-type {
+  margin: 5px 0px;
+}
