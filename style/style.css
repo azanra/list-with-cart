@@ -90,6 +90,7 @@ body {
   padding: 5px 10px;
   border-radius: 25px;
   color: white;
+  align-items: center;
 }
 
 .decre-btn,
@@ -311,4 +312,8 @@ body {
 
 #start-order:hover {
   background-color: var(--darkRed);
+}
+
+.btn-cart-logo > .btnText {
+  margin-left: 5px;
 }
