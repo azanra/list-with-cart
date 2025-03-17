@@ -47,28 +47,6 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 Focusing on how to organizing the code. I try multiple ways here, first is wrapping them in a object and put the method as property. The downside of this is that they lost the context of this instance when we are trying
 to use the method on the same object, hence we need to bind it if we want to use that method. Note that when we wrap in an object we can't use this in anonymous function because they dont bind this. that's why i use
 regular function call on method that need to call another method on the same object.
